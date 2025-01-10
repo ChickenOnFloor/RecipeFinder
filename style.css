@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+}
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    max-width: 1320px;
+    padding: 40px;
+}
+
+.brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.brand-img {
+    width: 120px;
+}
+
+.brand-title {
+    font-size: 70px;
+    font-family: "DynaPuff", serif;
+    color: rgb(41, 216, 41);
+}
+.search {
+    display: flex;
+    align-items: center;
+    color: black;
+    background-color: white;
+    max-width: 560px;
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid rgb(179, 177, 177);
+}
+
+.search-bar{
+    height: 26px;
+    width: 100%;
+    max-width: 300px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: rgb(179, 177, 177);
+}
+
+.search i {
+    color: rgb(179, 177, 177)
+}
+.container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1320px;
+    padding: 20px;
+}
+
+.receipe {
+    height: 100%;
+    max-height: 640px;
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgb(179, 177, 177);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: scroll;
+
+}
+
+button{
+    cursor: pointer;
+}
+.button {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.button button {
+    background-color: rgb(41, 216, 41);
+    border: none;
+    font-size: 24px;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.cards{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.card {
+    width: 200px;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Roboto", serif;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    border-radius: 10px;
+    gap: 10px;
+    text-align: center;
+    font-family: "DynaPuff", serif;
+}
+.card img{
+    width: 100%;
+    
+    border-radius: 8px;
+    object-fit: cover;
+}
+.card div{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.card h1{
+    width: 100%;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card h2{
+
+    font-size: 10px;
+    background-color: rgb(245, 222, 20);
+    padding: 4px;
+    border-radius: 4px;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card h3{
+    font-size: 12px;
+    background-color: rgb(248, 85, 44);
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: white;
+    text-align: center;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.card button {
+    padding: 4px 8px;
+    border: none;
+    background-color: rgb(44, 248, 44);
+    color: white;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.recipe-info {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.backdrop {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.45);
+    z-index: 5;
+}
+
+.info{
+    background-color: white;
+    width: 100%;
+    max-width: 840px;
+    height: 520px;
+    position: absolute;
+    border-radius: 10px;
+   display: none;
+    grid-template-columns: repeat(12, 1fr);
+    overflow: scroll;
+    font-family: "DynaPuff", serif;
+    z-index: 6;
+}
+
+.info1{
+    
+    grid-column: span 8;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info1 img{
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    align-self: center;
+    border-radius: 20px;
+}
+
+.info1 h1,h3{
+    align-self: center;
+    color: rgb(44, 248, 44);
+    text-align: center;
+}
+.info1 p, li{
+    font-size: 16px;
+    margin-left: 40px;
+}
+
+
+.info2{
+    grid-column: span 4;
+    padding: 10px;
+}
+
+.info2 ul{
+    list-style: none;
+    padding: 10px;
+    font-size: 16px;
+    color: rgb(94, 94, 94);
+}
+
+@media screen and (width <= 760px) {
+    
+}
