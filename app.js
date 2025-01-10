@@ -10,8 +10,8 @@ let searchQuery = '';
 function fetchRecipes(page, query = '') {
     const offset = (page - 1) * recipesPerPage;
     const url = query
-        ? `ttps://api.spoonacular.com/recipes/complexSearch?query=${query}&number=${recipesPerPage}&offset=${offset}&apiKey=${apiKey}`
-        : `ttps://api.spoonacular.com/recipes/random?number=${recipesPerPage}&offset=${offset}&apiKey=${apiKey}`;
+        ? `https://api.spoonacular.com/recipes/complexSearch?query=${query}&number=${recipesPerPage}&offset=${offset}&apiKey=${apiKey}`
+        : `https://api.spoonacular.com/recipes/random?number=${recipesPerPage}&offset=${offset}&apiKey=${apiKey}`;
     
     fetch(url)
         .then(response => response.json())
