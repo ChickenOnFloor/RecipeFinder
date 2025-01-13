@@ -4,6 +4,7 @@ let recipePage = document.querySelector('.recipe-info');
 const apiKey = "a9eee642aa1b4f86b5e4d0d3e54821f9";
 const recipeList = document.querySelector('.cards');
 const search = document.querySelector('.search-bar');
+const shmore = document.querySelector('.shmore');
 let currentPage = 1;
 const recipesPerPage = 40;
 let searchQuery = '';
@@ -115,3 +116,7 @@ backdrop.addEventListener("click", () => {
     backdrop.style.display = 'none';
     infoData.style.display = 'none';
 })
+shmore.addEventListener('click', () => {
+    currentPage++; // Increment the current page
+    fetchRecipes(currentPage, searchQuery); // Fetch more recipes for the next page
+});
